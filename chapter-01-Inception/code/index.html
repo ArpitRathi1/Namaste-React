@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <!-- Create a Hello world using HTML -->
+    <h1>Hello world from HTML</h1>
+    <div id="root-js"></div>
+    <div id="root"></div>
+
+    <script>
+      // Creating a hello world using Js
+      const heading = document.createElement("h1");
+      heading.innerHTML = "Hello world from Js";
+      const rootJs = document.getElementById("root-js");
+      rootJs.appendChild(heading);
+    </script>
+
+    <!-- We can inject react using react cdn links and after inserting this link we have all the functionalities of react -->
+    <!-- This link is for core react -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- This link is for react-dom -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    
+    <!-- <script>
+      // Creating a Hello world using react
+      // We can do it by React.createElement which takes 3 arguments
+      // 1 -> type
+      // 2 -> An object for props or we can say attributes like id or class
+      // 3 -> ...children
+      const react_heading = React.createElement(
+        "h1",
+        {
+          id: "title",
+        },
+        "Hello world from React"
+      );
+
+      console.log(react_heading); // React element is an object
+
+      // Now we create a root elemet for our react. Root element is the element where all the react code will run.
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      // Passing react element inside our root element
+      // If we have any element inside this root element react will overwrite this   
+      root.render(react_heading);
+    </script> -->
+
+    <script>
+      // Creating this kind of structure in react
+      // <div>
+      //     <h1>Heading 1</h1>
+      //     <h2>Heading 2</h2>
+      // </div>
+
+      const react_heading1 = React.createElement(
+        "h1",
+        {
+          id: "title1",
+        },
+        "Heading1"
+      );
+      const react_heading2 = React.createElement(
+        "h2",
+        {
+          id: "title2",
+        },
+        "Heading2"
+      );
+
+      // To pass multiple element we can us an array as children.
+      const container = React.createElement("div", {}, [
+        react_heading1,
+        react_heading2,
+      ]);
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(container)
+    </script>
+  </body>
+</html>
