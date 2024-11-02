@@ -1,0 +1,62 @@
+Steps -> 
+1. To ignite our app we need a package manager to manage our packages.
+
+2. For this we are using npm. (npm init)
+
+3. After this an package.json file is created in our directory.
+
+4. package.json -> is the configaration npm needs to run itself.
+
+5. Our react app can't run only by react, it requires a lot of packages and this packages are managed by npm.
+
+6. install parcel
+
+7. npm install -D parcel
+
+8. here -D means we are installing parcel as a dev-dependency.
+
+9. Now a new file (package-lock.json) is created.
+
+10. package-lock.json -> Tells us the exact version of the packages we are using.
+                         Never put it in gitignore.
+
+11. node_modules will also come -> what ever you install will get installed in this node_modules folder.
+                                   always put node_modules in gitignore. Because our package.json has enough info to recreate our node_modules
+
+12. Now we install react and react-dom.
+
+13. To ignite our app by command : npx parcel index.html.
+    npx means execute using npm
+
+14. This will create a server at http://localhost:1234.
+
+15. Now to run our code we need to import react and reactDOM form our node_modules.
+    But our browser doesnot understand this import.
+    To solve this we have to give our script tag type as module.
+
+16. Parcel Functionalities:
+    HMR : Hot Module Replacement -> Whenever we change something in code and saves it, page get automatically re-rendered.
+                                    Parcel do this with the help of file watchers algorithm. and this algo is written in c++
+    Bundling : 
+    Minify :
+    Cleaning our code :
+    Image Optimization : 
+    Catching by development :
+    Compression :
+    Port number :
+    Compatable with old verion of browsers :
+    HTTPS on dev : npm parcel index.html --https
+    Consistent hashing algorithms :
+    Zero config Bundler
+    
+    We should put our parcel-cache in gitignore Because anything which can be auto-generated should be in gitignore
+    
+17. When we make a produnction built of our project using command npm parcel built index.html.
+    In parcel we give the entry point of our project as index.html(in command line), so we do not need to give main in package.json.
+    npm parcel built index.html -> Now will create 3 files in dist - html, css, js
+
+18. To make our app user friendly with older browser verions we use browserlist.
+    and parcel automatically give it to us, we don't need to install this externally.
+    We can use browserlist by puting this in package.json.
+    it will take a list and if we add "last 2 verions" my app will work in last 2 verions of all the browsers.
+    use this website for more -> https://browserslist.dev/
