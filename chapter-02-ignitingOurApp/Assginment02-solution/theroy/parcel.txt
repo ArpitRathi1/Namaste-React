@@ -1,0 +1,32 @@
+Parcel -> Parcel is a web application bundler that can be used to build React applications.
+          Parcel works great for building single or multi-page React applications. 
+          It includes a first-class development experience with Fast Refresh, and supports JSX, TypeScript, Flow, and 
+          many styling methodologies out of the box.
+
+bundler -> A bundler in react.js is a tool which allows to package code into a single file or bundle. 
+           Due to this size of code will reduce and so performance of application will improve. 
+           Common bundlers used with React are Webpack and Parcel.
+
+.parcel-cache -> parcel-cache in parcel stores information about your project when parcel builds it, 
+                 so that when it rebuilds, it doesn't have to re-parse and re-analyze everything from scratch. 
+                 It's a key reason why parcel can be so fast in development mode.
+
+parcel provides the following Functionalities : 
+1. Bundling :
+2. Minify : Minification reduces the file size of your output bundles by removing whitespace, renaming variables to shorter names, 
+            and many other optimizations.
+            By default, minification is enabled when using the parcel build command.
+3. Dev server : Parcel’s builtin dev server is automatically started when you run the default.
+                It starts a server at http://localhost:1234. 
+4. Hot reloading : As you make changes to your code, Parcel automatically rebuilds the changed files and updates your app in the browser. 
+5. Caching : Parcel caches everything it builds to disk. 
+             If you restart the dev server, Parcel will only rebuild files that have changed since the last time it ran.
+             By default, the cache is stored in the .parcel-cache folder inside your project.
+6. HTTPS : Sometimes, you may need to use HTTPS during development.
+           Parcel’s dev server supports HTTPS out of the box.
+           parcel src/index.html --https
+7. Compatable with old verion of browsers : To make our app user friendly with older browser verions we use browserlist.
+                                            parcel automatically give it to us, we don't need to install this externally.
+                                            We can use browserlist by puting this in package.json.it will take a list 
+                                            If we add "last 2 verions" my app will work in last 2 verions of all the browsers.
+                                            use this website for more -> https://browserslist.dev/

@@ -1,0 +1,9 @@
+Dependencies -> These are libraries and frameworks that are required by an application's code to function. 
+                They are essential for a production build.
+
+devDependencies -> These are tools and libraries that help with the development process, but are not required for the app to run. 
+                   They are only needed for local development and testing. 
+                   DevDependencies are not installed in a production environment or in a host project.
+
+The main difference between dependencies and devDependencies is that dependencies are required for an application to run in production, 
+while devDependencies are only needed for development and testing.

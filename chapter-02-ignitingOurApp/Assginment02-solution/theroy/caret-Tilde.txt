@@ -1,0 +1,7 @@
+In package.json, the tilde (~) and caret (^) symbols are used to specify the version range for dependencies, 
+controlling how updates are handled when you run npm install or yarn install.
+
+package-name:  Major.Minor.Patch
+
+"express": "~4.16.3" -> Tilde allows only the patch version upgrades avoiding the minor updates.
+"express": "^4.16.3" -> caret allows updates to patch as well as minor versions.

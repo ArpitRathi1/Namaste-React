@@ -1,0 +1,8 @@
+package.json: This file is primarily used for managing and documenting metadata about the project, 
+              including its name, version, author, dependencies, scripts, and other configuration details. 
+
+package-lock.json: This file is generated and updated automatically by npm when installing or updating packages. 
+                   It is used to lock the exact versions of dependencies installed in the project, 
+                   ensuring reproducibility and consistent installations across different environments.
+
+blog-link -> https://umarfarooquekhan.medium.com/difference-between-package-json-and-package-lock-json-6225f83f247c

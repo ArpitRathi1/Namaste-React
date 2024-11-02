@@ -1,0 +1,14 @@
+NPM -> 
+npm is the world's largest Software Registry.
+The registry contains over 800,000 code packages.
+Open-source developers use npm to share software.
+npm includes a CLI (Command Line Client) that can be used to download and install software:
+All npm packages are defined in files called package.json.
+The content of package.json must be written in JSON.
+npm can manage dependencies.
+
+NPX ->
+NPX stands for Node Package eXecute. 
+It is simply an NPM package runner. 
+It allows developers to execute any Javascript Package available on the NPM registry without even installing it. 
+NPX is installed automatically with NPM version 5.2.

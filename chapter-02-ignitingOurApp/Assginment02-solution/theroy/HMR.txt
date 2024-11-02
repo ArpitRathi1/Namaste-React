@@ -1,0 +1,1 @@
+HMR -> Hot Module Replacement (HMR) exchanges, adds, or removes modules while an application is running, without a full reload.

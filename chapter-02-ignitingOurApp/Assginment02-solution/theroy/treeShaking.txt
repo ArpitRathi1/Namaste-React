@@ -1,0 +1,4 @@
+Tree Shaking -> Tree shaking is a technique used in JavaScript to remove unused code from a bundle, 
+                which can help improve performance and reduce file size. 
+                It's a popular concept in modern web development because of the rise of ES6 import and export statements.
+                Tree shaking is important for preparing code for production by reducing file size and creating clean structures.
