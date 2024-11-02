@@ -1,0 +1,15 @@
+Normal script tag -> 
+<script src="example.com/user" />
+In Normal script tag, HTML parcing goes on and when it encounters an script tag, script are fetched form the network and executed right there.
+And after that the rest HTML will be randered.
+
+Async script tag -> 
+<script async src="example.com/user" />
+In async tag, HTML parcing goes on and when it encounters an script tag, script are fetched in async manner(or Parallelly).
+As soon as script are availible, HTML parcing is stopped and script are executed.
+And after that the rest HTML will be randered.
+
+Defer script tag -> 
+<script defer src="example.com/user" />
+In defer tag, HTML parcing goes on and when it encounters an script tag, script are fetched in async manner(or Parallelly).
+And this script will be executed only after the HTML parcing is completed 

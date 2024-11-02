@@ -1,0 +1,69 @@
+Emmet is a free, open-source toolkit that helps you write HTML, CSS, and other structured code faster and more efficiently
+
+Save time: Type shortcuts that are expanded into full code.
+Reduce typos: Use Emmet's autocompletion.
+Combine selectors: Combine the sibling and the child selector to create a structure.
+
+Abbreviations Syntax ->
+
+Child: >
+
+emmet : div>ul>li
+structure : 
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+Sibling: +
+
+emmet : div+p+bq
+structure :
+<div></div>
+<p></p>
+<blockquote></blockquote>
+
+ClimbUp : ^
+
+emmet : div+div>p>span+em^bq
+structure :
+<div></div>
+<div>
+    <p><span></span><em></em></p>
+    <blockquote></blockquote>
+</div>
+
+Multiplication: *
+
+emmet : ul>li*5
+structure :
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+Grouping: ()
+emmet : div>(header>ul>li*2>a)+footer>p
+structure :
+<div>
+    <header>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </header>
+    <footer>
+        <p></p>
+    </footer>
+</div>
+
+ID and CLASS : 
+emmet : div#header+div.page+div#footer.class1.class2.class3
+structure : 
+<div id="header"></div>
+<div class="page"></div>
+<div id="footer" class="class1 class2 class3"></div>

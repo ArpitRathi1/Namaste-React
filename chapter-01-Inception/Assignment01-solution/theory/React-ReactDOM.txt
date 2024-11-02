@@ -1,0 +1,20 @@
+React ->
+React is a JavaScript library for building user interfaces. 
+It provides a declarative and component-based approach to building UI components. 
+With React, you can create reusable and modular UI components that encapsulate their own logic and rendering behavior. 
+React introduces the concept of a "virtual DOM," which is an abstraction of the actual DOM.
+
+Virtual DOM -> 
+In React, the virtual DOM is a programming concept that stores a copy of a browser's DOM in JavaScript memory.
+This copy is then updated and compared to the actual DOM to determine what to render. 
+
+The virtual DOM helps React by:
+1. Updating only necessary parts
+2. Improving performance
+
+React-DOM -> 
+A package that connects React's Virtual DOM to the browser's DOM. 
+React DOM's primary function is to render React components into the DOM. 
+React DOM is used exclusively in web apps.
+
+React and React DOM were split into two libraries to support React Native, a React platform for mobile development.

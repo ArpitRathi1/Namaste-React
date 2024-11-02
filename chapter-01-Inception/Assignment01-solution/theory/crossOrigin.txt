@@ -1,0 +1,2 @@
+CORS ( Cross Origin Resource Sharing )
+With the help of CORS we can share resources from one domain to another domain who has different origin.

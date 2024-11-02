@@ -1,0 +1,15 @@
+The main difference between a library and a framework is that a library provides a collection of functions that a developer can use, 
+while a framework controls how a project is organized and how the code is used.
+
+Library -> A library is a collection of functions and classes that developers can use to speed up their work. 
+           Libraries are like tools that developers can use to do a specific job. 
+           For example, a developer can use a library to communicate with a database, manage user input, or produce graphics. 
+           Libraries can be easily linked into existing programs to add specific functionality.
+
+Framework -> A framework is a set of blueprints that developers use to build apps, websites, and digital systems.
+             Frameworks control the flow of a project, and the code must follow the rules set by the framework. 
+             Frameworks are difficult to incorporate into existing projects.
+
+Difference -> The technical difference between a library and a framework is known as inversion of control.
+              When using a library, the developer controls the application flow.
+              When using a framework, the framework controls the flow and calls functions from the developer's code.

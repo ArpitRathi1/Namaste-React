@@ -1,0 +1,2 @@
+Why react known as React?
+React is called React because it reacts only when there are changes in the component's state or props.
