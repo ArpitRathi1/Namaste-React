@@ -1,0 +1,6 @@
+{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+
+{TitleComponent} -> {} in JSX is used to write JS in JSX.
+                    Everything use write in {} will be treaded as JS.
+
+{<TitleComponent/>} and {<TitleComponent></TitleComponent>} and {TitleComponent()} -> Are the ways to render functional component.

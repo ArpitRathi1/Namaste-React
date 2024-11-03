@@ -1,0 +1,16 @@
+JSX -> React comes with the concert of writting HTML with JS.
+       But React.createElement is very complex.
+       To get rid of this facebook comes with the concert of jsx.
+       JSX is not HTML inside JavaScript, It is just HTML like syntax.
+       JSX => React.createElement => object => HTML(DOM).
+       Babel convertes your JSX code into createElement.
+
+is JSX mendatory for React -> No, JavaScript XML (JSX) is not required for using React.
+                              However, JSX is a popular approach for defining the structure and logic of React components.
+                              It's widely used because it's simple and readable, and it allows developers to use HTML-like syntax.
+
+is JSX mendatory for React -> ES6 (ECMAScript 6) is not mandatory for React, but it's highly recommended.
+                              React uses many ES6 features, and it's easier to learn React if you already understand JavaScript.
+
+{} -> {} can be used in JSX to write JavaScript.
+      Example : { 1+2 }   // output : 3
