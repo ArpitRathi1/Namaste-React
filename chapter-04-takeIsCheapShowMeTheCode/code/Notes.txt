@@ -1,0 +1,11 @@
+React.Fragment -> Any piece of JSX can only have one parent.
+                  To solve this we have React.Fragment which is a component exported by React.
+                  We can use this by <React.Fragment></React.Fragment> or <></>.
+                  It helps us to group a list of children without adding extra node to DOM.
+
+Inline-style in React -> We can give inline style in React by style attribute.
+                         style attribute will take an object which has styling properties in camel case.
+                         style = {{}}.
+
+props -> Props are the info you pass with a JSX Tag as attributes.
+         Passins props means we are passing data to our components.
