@@ -1,0 +1,59 @@
+Polyfill -> A polyfill is a piece of code, often written in JavaScript, 
+            that enables modern functionality in older browsers that lack native support for it. 
+            Polyfills are used to bridge the gap between the capabilities of modern browsers and older ones, 
+            allowing developers to use the latest JavaScript features and APIs without worrying about browser support.
+            in other words, polyfill takes modern JavaScript code and concerts it to older JavaScript code,
+            which can be understood by older versions of browsers.
+
+Building start script -> "start" : "parcel index.html" -> in script.
+                         now we can start out server with command : npm run start or npx start or npm start
+                         npm run = npx
+
+                         "build" : "parcel build index.html" -> in script.
+                         now we can start out server with command : npm run build or npx build or npm build
+                         npm run = npx
+
+babel-plugin-transform-remove-console -> babel can not remove all the console automatically it need this plugin.
+                                         and its config to remove all the console.
+                                         read its documentation later.
+
+keys -> whenever you have array in react you should always have key for every item of that array to identify items spacifically.
+        read reconciliation and Diffing also on react documentation.
+        key should always be unique
+
+React.createElement -> React.createElement functional will give us an object.
+                       Than this object is converted into an HTML DOM.
+                       React.createElement => object => HTML(DOM)
+
+Suppose we have to create a big HTML structure. It will be very complex to create this using React.createElement.
+To get rid of this we use jsx.
+
+JSX -> React comes with the concert of writting HTML with JS.
+       But React.createElement is very complex.
+       To get rid of this facebook comes with the concert of jsx.
+       JSX is not HTML inside JavaScript, It is just HTML like syntax.
+       JSX => React.createElement => object => HTML(DOM).
+       Babel convertes your JSX code into createElement
+
+React Element -> A React element is a plain object describing a part of the UI.
+                 const heading2 = (
+                    <h1 id="heading" key="hReact uses many ES6 features, and it's easier to learn React if you already understand JavaScript.eading">
+                      JSX Heading
+                    </h1>
+                 );
+React Component -> A React component is a function or a class that can produce React elements and manage their state and lifecycle. 
+                   Components can return multiple elements, components, strings, numbers, or any other types React can render.
+                   types : 
+                   1. Functional -> New
+                   2. Class based -> Old
+
+Functional Component -> Functional Component is nothing but a function.
+                        That return JSX or react element or composition of react element or other component.
+                        Name of functional component start with a capital letter.
+                        To call functional component:
+                        <ComponentName></ComponentName> or <ComponentName /> or {ComponentName()} 
+
+{} -> {} can be used in JSX to write JavaScript.
+      Example : { 1+2 }   // output : 3
+
+Component composition -> using component inside another component to for make a complex structure is known as Component composition. 
