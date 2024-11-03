@@ -1,0 +1,2 @@
+React Fiber -> React Fiber is a reimplementation of React's reconciliation algorithm 
+               that aims to improve the user interface's responsiveness and renderability.

@@ -1,0 +1,5 @@
+Reconciliation -> Reconciliation is a process in React that 
+                  updates the user interface (UI) by comparing the virtual DOM to the actual DOM and making the necessary changes.
+                  Reconciliation is React's way of diffing the virtual DOM tree with the updated virtual DOM 
+                  to determine the most efficient way to update the real DOM.
+                  To compare virtual DOM with actual DOM React uses diff algorithm.

@@ -1,0 +1,11 @@
+configuration-driven UI (CDUI) -> A configuration-driven UI (CDUI) is a user interface 
+                                  that is created using a configuration file, such as JSON to define the UI's layout and content.
+
+
+Here are some benefits of CDUI:
+1. Flexibility : The configuration data can be easily modified or replaced without affecting the underlying application logic.
+2. Adaptability : The UI can be tailored to different use cases or user groups without the need for extensive coding.
+3. Customization : The UI can be customized without the need for code alterations or real-time server control.
+
+CDUI is particularly useful in situations where flexibility and adaptability are key.
+Config-driven UI is a technique that allows you to create dynamic and customizable UIs without hard coding them.

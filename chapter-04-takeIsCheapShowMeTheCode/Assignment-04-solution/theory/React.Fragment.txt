@@ -1,0 +1,3 @@
+React.Fragment -> In JSX we can only have one parent element.
+                  React.Fragment lets you group a list of children without adding extra node to DOM.
+                  Syntax : <React.Fragment></React.Fragment> or <></>

@@ -1,0 +1,43 @@
+props -> In React, props are a keyword that stands for "properties" and is used to pass data between components.
+         Props are passed from parent to child components in a unidirectional flow.
+         Here are some things to know about props in React:
+         1. Passing values : Props can pass any JavaScript value, including objects, arrays, and functions.
+         2. Passing via HTML attributes : Props are passed to components via HTML attributes. 
+         
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
+}
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand="Ford" />
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage />);
+
+const RestrauntCard = ({name, image, tag, star}) => {
+  return (
+    <div className="card">
+      <img src={image}></img>
+      <h2>{name}</h2>
+      <h3>{tag.join(", ")}</h3>
+      <h4>{star} stars</h4>
+    </div>
+  )
+}
+// no key <<<<<<<<<< index key (use only when you dont have anything) <<< unique key (best practice)
+function Body () {
+  return (
+    <div className="Body">
+      {
+        RestrauntList.map((restraunt, index) => {
+          return <RestrauntCard key={index} {...restraunt}></RestrauntCard>
+        })
+      }
+    </div>
+  )
+}

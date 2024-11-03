@@ -1,0 +1,7 @@
+Virtual DOM -> In React, the virtual DOM (VDOM) is a programming concept.
+               That keeps a virtual representation of a user interface (UI) in memory and syncs it with the real DOM.
+               This process is called reconciliation.
+               The VDOM helps React improve performance by:
+               1. Updating only necessary parts
+               2. Preventing wasteful DOM manipulation : The VDOM prevents unnecessary DOM manipulation.
+

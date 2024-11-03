@@ -1,0 +1,7 @@
+Comments -> Like other languages, JSX provides us with the ability to write comments. 
+            Syntax -> {/* This is a JSX comment */} 
+                      {/* This is a single line comment */}
+                      {/* This is
+                      a multiline 
+                      comment */}
+                      { // Another way to write comment. }
