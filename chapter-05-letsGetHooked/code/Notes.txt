@@ -1,0 +1,50 @@
+Import-export -> The magic of components lies in their reusability: 
+                 you can create components that are composed of other components. 
+                 But as you nest more and more components, it often makes sense to start splitting them into different files. 
+                 This lets you keep your files easy to scan and reuse components in more places.
+
+You can move a component in three steps:
+1. Make a new JS file to put the components in.
+2. Export your function component from that file (using either default or named exports).
+3. Import it in the file where you’ll use the component (using the corresponding technique for importing default or named exports).
+
+Exporting -> There are two ways of exporting a file.
+
+1. Default export -> Default export are handy for exporting single value and giving it a custom name when importing.
+                     We can change the name in default export while importing,
+                     But always give it the same name (Best practice)
+                     We can only export onething using default export.
+                     syntax for exporting : export default FileName
+                     syntax for importing : import FileName from "path"
+
+2. Named export -> Named export are useful when you want to export multiple values and import them with their specific name,
+                   We can't change the name in named export while importing.
+                   syntax for exporting : export { FileName1, FileName2 }
+                   syntax for importing : import { FileName1, FileName2 } from "path"
+                   In named import (import { FileName1, FileName2 } from "path") this looks object destructuring,
+                   but this is not object destructuring, this is only the syntax of react.
+
+config.js or constants.js -> We should put all the hard-coded thing in our config file.
+                             Like restrauntList, logo etc.
+
+State -> Every component in react maintains a state, and we can put all the varibles in this state.
+         State is a built-in react object that is used to contain data or info about the component.
+         A component state can be change over-time.
+         whenever it changes, the component re-renders.
+
+State varible -> Varible which are maintained by react's state is known as state varible.
+                 State varibles are very important in react because if you create varible same like js varible(using let or const).
+                 react will not keep track  of that varible.
+                 and if you update those varible your UI will not be updated accordingly.
+                 If you want you UI to be in sync with your varibles than you should always create state varible.
+                 All keeps a track of all state varibles.
+
+Hooks -> Hooks are nothing but a JS function.
+         Every hook has a specific task to perform.
+         There are many hooks in react one of those is useState().
+
+useState -> useState() is a react hook which is used to create state varibles.
+            useState() returns an array which has to items.
+            first is name of state varible.
+            second is function to update this state varible.
+            syntax : const [varibleName, functionToUpdateVariable] = useState()
