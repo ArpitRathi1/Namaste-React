@@ -1,0 +1,41 @@
+There are Two ways to load a page.
+1. Firstly load the page call API and then render the page.
+2. Load the page render somthing then call API and then re-render the page again.
+Second way to load the page is better because of user experiance.
+
+useEffect -> In React it is not a good idea to call in API directing in your component, because
+             If you do so your API is called every time your component renders.
+             In React there is a better way to call API by useEffect hook. 
+
+             useEffect hook lets you perform side effects in functional component.
+             Data fetching, manually changing DOM are some example of side effects.
+             If you want to do somthing on render or re-render of component, you can use useEffect.
+
+             syntax : useEffect(setUp, dependencies)
+
+             useEffect takes two argu:
+             1. setUp : a callback function.
+             2. dependencies : a dependency array.
+
+             Whenever our component render or re-render,firstly our component renders then callback function of useEffect is called.
+
+             case 1 : If you don't pass dependency array in useEffect,
+                      Then setUp function will be called for every state varible update.
+                      syntax : useEffect(() => {
+                                console.log("render")
+                               })
+             case 2 : If you pass an empty dependency array in useEffect,
+                      Then setUp function will be called only on first rendering.
+                      syntax : useEffect(() => {
+                                console.log("render")
+                               }, [])
+             case 3 : If you want to call setUp function on a specific state update,
+                      Then you can pass that state in dependencies.
+                      syntax : useEffect(() => {
+                                console.log("render")
+                               }, [stateVaribleName1, stateVaribleName2])       
+
+Conditional rendering -> In React, you can create distinct components that encapsulate behavior you need. 
+                         Then, you can render only some of them, depending on the state of your application.
+                         (Adding element on the basic of some Condition)
+            
