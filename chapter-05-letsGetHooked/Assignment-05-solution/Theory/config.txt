@@ -1,0 +1,2 @@
+config.js or constants.js -> We should put all the hard-coded thing in our config file.
+                             Like restrauntList, logo, links etc.

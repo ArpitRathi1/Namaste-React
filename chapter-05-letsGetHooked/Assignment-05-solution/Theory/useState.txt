@@ -1,0 +1,17 @@
+State -> Every component in react maintains a state, and we can put all the varibles in this state.
+         State is a built-in react object that is used to contain data or info about the component.
+         A component state can be change over-time.
+         whenever it changes, the component re-renders.
+
+State varible -> Varible which are maintained by react's state is known as state varible.
+                 State varibles are very important in react because if you create varible same like js varible(using let or const).
+                 react will not keep track  of that varible.
+                 and if you update those varible your UI will not be updated accordingly.
+                 If you want you UI to be in sync with your varibles than you should always create state varible.
+                 All keeps a track of all state varibles.
+
+useState -> useState() is a react hook which is used to create state varibles.
+            useState() returns an array which has to items.
+            first is name of state varible.
+            second is function to update this state varible.
+            syntax : const [varibleName, functionToUpdateVariable] = useState()

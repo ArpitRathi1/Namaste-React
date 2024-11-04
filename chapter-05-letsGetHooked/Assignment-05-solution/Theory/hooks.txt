@@ -1,0 +1,3 @@
+Hooks -> Hooks are nothing but a JS function.
+         Every hook has a specific task to perform.
+         There are many hooks in react one of those is useState().

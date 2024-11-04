@@ -1,0 +1,25 @@
+Import-export -> The magic of components lies in their reusability: 
+                 you can create components that are composed of other components. 
+                 But as you nest more and more components, it often makes sense to start splitting them into different files. 
+                 This lets you keep your files easy to scan and reuse components in more places.
+
+You can move a component in three steps:
+1. Make a new JS file to put the components in.
+2. Export your function component from that file (using either default or named exports).
+3. Import it in the file where you’ll use the component (using the corresponding technique for importing default or named exports).
+
+Exporting -> There are two ways of exporting a file.
+
+1. Default export -> Default export are handy for exporting single value and giving it a custom name when importing.
+                     We can change the name in default export while importing,
+                     But always give it the same name (Best practice)
+                     We can only export onething using default export.
+                     syntax for exporting : export default FileName
+                     syntax for importing : import FileName from "path"
+
+2. Named export -> Named export are useful when you want to export multiple values and import them with their specific name,
+                   We can't change the name in named export while importing.
+                   syntax for exporting : export { FileName1, FileName2 }
+                   syntax for importing : import { FileName1, FileName2 } from "path"
+                   In named import (import { FileName1, FileName2 } from "path") this looks object destructuring,
+                   but this is not object destructuring, this is only the syntax of react.
