@@ -1,0 +1,24 @@
+Conditional Rendering -> In React, you can create distinct components that encapsulate behavior you need. 
+                         Then, you can render only some of them, depending on the state of your application.
+                         we use JavaScript operators like if or the conditional operator (ternary op) to create elements representing the current state, 
+                         and let React update the UI to match them.
+
+Example : 
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <MadeGoal/>;
+  }
+  return <MissedGoal/>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Goal isGoal={false} />);

@@ -1,0 +1,25 @@
+Monolith -> monolithic is a traditional application architectures, 
+            where all the application's features are coded into a single executable application. 
+            Advantages : 
+            1. Easy development : When an application is built with one code base, it is easier to develop.
+            2. East deployment : One executable file or directory makes deployment easier.
+            3. Simplified testing : end-to-end testing can be performed faster than with a distributed application. 
+            4. Easy debugging : With all code located in one place, it’s easier to follow a request and find an issue.
+            Dis-Advantages : 
+            1. Slower development speed : A large, monolithic application makes development more complex and slower.
+            2. Scalability : You can’t scale individual components.
+            3. Lack of flexibility : A monolith is constrained by the technologies already used in the monolith.
+            4. Deployment : A small change to a monolithic application requires the redeployment of the entire monolith.
+
+Microservices -> Microservices is a software development architecture that breaks large applications into smaller,independent services.
+                 Each service has its own responsibility and communicates with other services through APIs.
+                 Benefits : Separation of responsibilities, Faster development, easier scaling and more.
+                 Advantages :
+                 1. Flexible scaling
+                 2. Continuous deployment
+                 3. Highly maintainable and testable 
+                 4. Technology flexibility
+                 Dis-Advantages :
+                 1. Exponential infrastructure costs 
+                 2. More complex
+                 3. Teams need to add another level of communication and collabration

@@ -1,0 +1,3 @@
+Shimmer UI -> A shimmer UI is a kind of the user interface 
+              that mimics the shades and forms of content that will ultimately appear instead of having any actual content.
+              It is a cool way often used when a web page or app is loading.

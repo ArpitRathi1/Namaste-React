@@ -1,0 +1,15 @@
+JS Expression -> JavaScript code that produces a value is JS Expression.
+                 For example, these are all expressions:
+                 1 → produces 1
+                 "hello" → produces "hello"
+                 5 * 10 → produces 50
+                 num > 100 → produces either true or false
+                 isHappy ? "🙂" : "🙁" → produces an emoji
+                 [1, 2, 3].pop() → produces the number 3
+
+JS Statement -> A JavaScript program is a sequence of statements. 
+                Each statement is an instruction for the computer to do something.
+                Here are some examples of statements in JavaScript:
+                let hi = 5;
+
+reference link : https://www.joshwcomeau.com/javascript/statements-vs-expressions/
