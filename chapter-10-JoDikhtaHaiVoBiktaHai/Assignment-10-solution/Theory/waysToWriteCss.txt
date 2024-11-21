@@ -1,0 +1,42 @@
+why we should use css framework -> 1. To write optimised css.
+                                   2. It saves time.
+
+ways to write css : 
+1. Index file -> We can write all our classes in index.css file and attached it to out HTML page.
+
+2. Inline css -> We can write Inline css using style prop,
+                 This style prop takes an object and this object contains css properties as key-value pair.
+                 Note -> Always write all css properties in object in camelcase.
+                 like -> background-color => backgroundColor
+                 This is not a good way of writing css.
+                 because of less readablilty, and it is difficulte for browser render it.
+
+3. Library -> is to use Library like materialUI, baseUI, Ant, chakra.
+              materialUI is a fully loaded component library.
+              It has a lot of pre-build components which already styled.
+              we can use this library because it give us consistency, reponsivness.
+              cons -> increases bundle size, we loose controll on how our app will look.
+              
+4. Styled components -> read about it
+
+5. Framework -> We can also use css framework like tailwind or bootstrap.
+                in this we are learing tailwind css.
+                tailwind is a open source css framework.
+                
+                Pros -> 1. Can write css on the go.(in the same file)
+                        2. reusablity.
+                        3. less bundle size.(No duplicate css)
+                        4. customizable.
+                        5. easy to debug.
+                cons -> 1. Initial learing curve.
+                        2. Code look a little messy.
+                
+                When we start using tailwind, it change default behavior or a lot of tags.
+                because now we have to write all css in tailwind's way.
+
+                Every thing in tailwind works with classname.
+
+                There are two ways to add tailwind into your project.
+                1. CDN link -> copy CDN link form tailwind website and paste it into HTML head tag, and start using tailwind css.
+                2. NPM package -> install NPM package of tailwind.
+                
