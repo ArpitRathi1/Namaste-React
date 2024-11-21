@@ -1,0 +1,61 @@
+Nested Route -> Suppose if we want to create a profile route inside about route.
+                We can do this by children of children.
+                which means we can pass a children property in our about.
+                we can to give relative path in profile. 
+                which means give only profile, not /about/profile.
+                also don't give / before profile. otherwise react will consider it as localhost:1234/profile.
+                Now for this profile children we have to create an Outlet,
+                and Outlet must be created in parent component.
+
+Class based components -> When react started the concepts of components starts with class based components.
+                          And it used to be very painful write code.
+                          class components are big as compared to functional components.
+
+We are creating a class based component profileClass.js
+1. First we use keyword class than we tell react that it is not a normal class but a class based component.
+   using extends React.component.
+   example : class Profile extends React.Component{}
+   extends is used because Profile class is inheariting properties from React.Component class.
+2. Most important part of class component is render method. This render method returns JSX.
+   what ever you return will be injected into the DOM.
+3. We import/export class component same as functional component. Also we use tham in similar manner.
+4. We pass the props same as functional component.
+   But we get the props by this.props.
+5. Creating state varible in class component.
+   functional component has a state, in the same way class has a constructor.
+   We can create state inside constructor using this.state and pass an object in which we can create variables as key-value pair.
+   All the state variables will be created inside this object.
+   and we can use this state variables by this.state.key.
+6. Updating state varible in class component.
+   To update the state variable we use setState function and pass a modified object in it.
+   We don't mutate state directly , Never do this.state = something,
+   In class component we can update multiple state variable together.
+
+Component life-cycle -> 
+1. Whenever a class component is loaded a life-cycle method that is called, which defines how the life cycle of a component goes.
+2. First of all constructor is called.
+3. Then the component renders.
+4. Then componentDidMount is called. And componentDidMount is the best place to make API calls.
+5. Parent-child life-cycle: 
+    Parent Constructor
+    Parent - render
+    Chlid - Constructor
+    Chlid - render
+    Child - ComponentDidMount
+    Parent - componentDidMount
+(See about and profileClass component)
+6. componentDidMount is called after first render, componentDidUpdate will be called after every next render.
+7. componentWillUnmount is called when our component go from the DOM(Or will switch to some other page).
+   componentWillUnmount is used for cleanup - In react we create SPA
+   so if we go from home to about component there are a lot of things we need to clear, and for this we use componentWillUnmount.
+   For example if we setInterval in componentDidMount and go to another page this setInterval still works.
+
+8. we also have to do this in function component.
+   But in function component we can do by returning a function inside useEffect's callback function.
+   this returned function is called when we leave the page. (See MealDetails useEffect)
+
+When react is rendering things : It does it in two phase.
+1. Rendering phase -> Pure and no side effect, may be paused, aborted and restarted by react.
+                      render phase includes constructor and render method.
+2. Commit phase -> Commit phase is the phase where react is modifiying your DOM.
+                   Can works with DOM, run side effect, schedule updates.
