@@ -1,0 +1,49 @@
+1. Never create a component inside a component.
+2. Never create a state varible inside if-else or loop.
+3. useState is a hook which is used to create state varible inside functional component,
+   Never use useState outside a functional component.
+4. We can create more than one useEffect in one component.
+
+assets -> It is good practice to keep our images in assets folder.
+          import syntax : import logo from "../../assets/images/logo.jpg";
+
+react-router-dom -> The react-router-dom package contains bindings for using React Router in web applications.
+                    React Router DOM is a JavaScript package that helps developers create dynamic web applications using React.
+                    React Router Dom is used to build single-page applications i.e. applications that have many pages or components 
+                    but the page is never refreshed instead the content is dynamically fetched based on the URL.
+                    developed by Remix.
+
+Steps for creating routing in our component :
+1. firstly install react-router-dom.
+2. import createBrowserRouter for react-router-dom.
+3. in createBrowserRouter function we will create config for our routers.
+4. now we create an appRouter using createBrowserRouter. 
+5. createBrowserRouter takes an array and in this array we define our config.
+6. now we import RouterProvider from react-router-dom, and pass our appRouter as a prop in router.
+7. To create a default error page, we can create a error component and pass it in errorElement in our appRouter.
+8. If we want to show some more info about error, we can use a hook (useRouteError) which is provided by react-router-dom.
+9. Now to link our header Element with our routers we use Link tag which is provided by react-router-dom.
+10. Behind the sceen this Link tag is also using <a></a> tag but we don't use anchore tag in react,
+    because anchore tag refreshes our whole page, and in react we are creating a single-page-application.
+    and in SPA we don't reload page everytime to load a component.
+11. Now if we go to about page our header and footer is gone. we want our header and footer in every page,
+    So we have to change our routing config,
+    To do so we have to have our about page children of AppLayout,
+    Now to load the children according to path we use Outlet,
+    We put our Outlet in AppLayout component between header and footer,
+    and this Outlet is filled according to our children config
+    (All the children will go in Outlet according to path)
+
+SPA -> Previously when we want to move to one page to another, we have to make network call every time.
+       But in react we build single page applications, which means we don't have to make network call every to load a component.
+
+Dynamic Routing -> Dynamic routing in React is a technique that allows us to create routes based on dynamic data or parameters, 
+                   rather than defining static routes explicitly.
+                   Dynamic routing uses route parameters or URL segments to define routes that can change based on certain parameters.
+
+Steps to create a Dynamic Route :
+1. create a route with path : "/example/:id"
+2. : means that this id is not static, it is dynamic.
+3. Now create a component and assign it to this path. (element : <MealDetails></MealDetails>)
+4. Now to read this id in component we use useParams hook which is provided by react-router-dom.
+5. useParams will returns us an object this contains all the dynamic varible which we pass through path.
