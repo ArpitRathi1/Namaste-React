@@ -1,0 +1,8 @@
+The main difference between client-side routing and server-side routing is how a user navigates to a new page on a website: 
+
+Client-side routing : The app updates the URL and renders new UI without making a request to the server.
+                      This results in a faster user experience, especially for single-page applications (SPAs).
+
+Server-side routing : The server sends the HTML of the new page to the browser, which reloads the entire page.
+                      This is the traditional approach to routing, and it's usually faster to load the initial page.
+                      However, each request results in a full page refresh, which can be inefficient. 

@@ -1,0 +1,4 @@
+console.log(useState()) -> If we do a console.log(useState()).
+                           It will return an array of two items, in which
+                           0th item is undefined.
+                           1st item is a function.

@@ -1,0 +1,35 @@
+Ways to Display Images in React JS
+1. Using import keyword.
+2. Using URLs 
+
+1. Using import keyword -> You can import images directly into your component when they are stored in the project directory.
+                           This method is useful when dealing with small images or when using static assets.
+
+import React from 'react';
+import logo from './logo.png';  // Importing image from the src folder
+
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <img src={logo} alt="App Logo" />
+    </div>
+  );
+}
+
+export default App;
+
+2. Using URLs -> You can also use external image URLs in your components. 
+                 This is common for dynamically loading images or when using a Content Delivery Network (CDN).
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <img src="https://example.com/logo.png" alt="App Logo" />
+    </div>
+  );
+}
+
+export default App;
