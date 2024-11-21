@@ -1,0 +1,25 @@
+Why can't we have the callback function of useEffect async?
+
+Let's understand the reasons why an asynchronous callback function cannot be called directly from a useEffect() hook. 
+This is because the useEffect hook expects its effect function to return either a cleanup function or nothing at all. 
+This is due to the useEffect() hook's callback function's asynchronous execution and lack of blocking. 
+Therefore, we must follow a specific pattern if we want to call an asynchronous function inside the useEffect() hook.
+
+The special pattern is to create a new function that is declared inside the useEffect() hook and 
+that contains the async function, and then we can call this new function inside the useEffect() hook. 
+Here's an example:
+
+import React, { useEffect } from 'react';
+function App() {
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('https://example.com/data');
+      const data = await response.json();
+      console.log(data);
+    }
+
+    fetchData();
+  }, []);
+
+  return <div>Hello World</div>;
+}

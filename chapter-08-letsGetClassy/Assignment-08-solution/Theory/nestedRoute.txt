@@ -1,0 +1,42 @@
+Nested Route -> Route within route is known as Nested route.
+                Suppose if we want to create a profile route inside about route.
+                We can do this by children of children.
+                which means we can pass a children property in our about.
+                we can to give relative path in profile. 
+                which means give only profile, not /about/profile.
+                also don't give / before profile. otherwise react will consider it as localhost:1234/profile.
+                Now for this profile children we have to create an Outlet,
+                and Outlet must be created in parent component.
+
+const appRouter = createBrowserRouter([
+  {
+    path : "/",
+    element : <AppLayout />,
+    errorElement : <Error />,
+    children : [
+      {
+        path : "/",
+        element : <Body />
+      },
+      {
+        path : "/about",
+        element : <About />,
+        children : [
+          {
+            path : "profile",      // localhost:1234/about/profile
+            element : <ProfileClass name="ArpitClass" age={10}/>
+          }
+        ]
+      },
+      {
+        path : "/contact",
+        element : <Contact />
+      },
+      {
+        path : "/meal/:id",                // This id is dynamic
+        element : <MealDetails></MealDetails>
+      }
+    ]
+  },
+
+])
