@@ -1,0 +1,31 @@
+Customize hook -> give us reusablity, maintainability and readability.
+                  whenever we are creating a hook always write use in front of it.
+                  See useMealDetails.js hook.
+
+Now we are building a feature where we check whether our internet is connected or not. (useOnline hook)
+
+note -> whenever you addEventListener always remove it.
+
+Lazy Loading -> As we know parcel is a bundler, and main job of our bundler is to bundle our code and make a single js file out of it.
+                But in big app we have a lot of components and if we bundle all the components or code in a single file,
+                our app will become very slow.
+                And if we want to create large app we can't just create one bundle(one JS file).
+                so we should do chunking or lazy loading or code spliting or dynamic building or on demand loading or dynamic import.
+                building is good but you can't bundle everything in your app, you have to make logical bundles.
+
+                lazy loading is done where you have imported the component, and here we have to lazy load this component.
+                To lazy load component we use function lazy which is provided by react.
+                This lazy takes a callback function in which we pass path of the component using import function.
+                syntax : const InstaMart = lazy(() => import("./components/InstaMart"))
+                Now our original bundle does not have InstaMart code.
+                Now InstaMart is a different bundle.
+                and when we click on InstaMart it take some time to load the script.
+                and meanwhile react tries to render it(react is rendering something which is not there.)
+                Upon on demand render => Upon render => react suspend loading
+                To handle this we use Suspense and wrap our InstaMart component inside Suspense.
+                Now react will takecare of it automatically.
+                this Suspense take a prop fallback, 
+                and in this fallback back we can pass whatever we need to show untill InstaMart is fetched.
+
+                note -> don't lazy load your component inside another component.
+                        Because if you do so, this will lazy loaded after every render cycle.
