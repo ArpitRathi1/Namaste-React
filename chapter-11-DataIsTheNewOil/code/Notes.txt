@@ -1,0 +1,41 @@
+Front end consist of two layers : 1. UI layer -> Every thing you see on web page.
+                                  2. Data layer -> UI layer is powered by a data layer.
+                                                   data layer is consist of state and props.
+                                                   We manage this UI with state and props.
+
+State -> is a lacal varible of a component.
+props -> prop is the value passed from one component to another component.
+
+But do we always manage this state with state and props ?
+No, There are more things to that.
+
+Props drilling -> Suppose we have 4 component c1, c2, c3, c4.
+                  And c1 is parent of c2 and c2 is parent of c3 and so on.
+                  and if we need to pass a data(or state) from c1 to c4.
+                  we can't pass it directly using props.
+                  we have to pass data form c1 to c2 then c2 to c3 then c3 to c4.
+                  and this chain of passing props is known as prop drilling.
+                  We can do prop drilling for 2 to 3 levels but it is not good for more then that.
+                  Because it make our code clutered and if we change this prop all our component associated will be re-rendered.
+
+context -> When you need same data all over your app, it is not a good idea to use prop drilling.
+           You have to store it in a central space.
+           React give us the access to this central storage which is context.
+           Now we are creating a new context called UserContext.js (in utils folder).
+           1. firstly import createContext from React
+           2. Now creating context using createContext function.
+           3. This create context takes a object and in this object we can define our varibles.
+           4. Now to use this data in any component of our app we can use a hook, useContext (We are using this in Header).
+           5. useContext hook takes a argument which is name of context.
+           6. Now we can use this data in any component.
+
+           In Class component we can use context, but in Class component we will use it as a component.(About.js component)
+           We import UserContext in component.
+           and use it as <UserContext.Consumer></UserContext.Consumer>
+           This take in a jsx which is a function and this function has the value of this context.
+
+
+
+
+
+Lifting State Up -> See component InstaMart.
