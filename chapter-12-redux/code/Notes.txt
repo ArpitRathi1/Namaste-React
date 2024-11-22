@@ -1,0 +1,80 @@
+For handling data in large scale app we use a library called redux.
+Advantage -> 1. redux is used to manage data layer of our application.
+
+cons -> 1. Complex to setup.
+        2. Learning curve.
+
+Earlier we use context in our app to avoid prop drilling.
+but when our app  grows a lot we use library like redux to handle our data.
+So instead of creating different context we can create a redux store.
+
+Redux-toolkit -> Initially redux is very Complex to understand. So redux has come up with redux-toolkit.
+                 redux-toolkit package is intended to be standrad way of writing redux logic.
+                 It was originally created to help address three common concerns about Redux:
+                 "Configuring a Redux store is too complicated",
+                 "I have to add a lot of packages to get Redux to do anything useful"
+                 "Redux requires too much boilerplate code"
+
+Architechture -> 
+In Redux we have a single store for all data.
+But we will create logical seperation into our store for every data. (Slices)
+
+Our component can not modify the store directly.
+To modify we have to dispatch an action.
+This action will call a function, and this function will modify our app.
+And this function is called reducer.
+
+(When we click on the add button it dispatches an action, which calles the reducer function to update Slice of our redux store.)
+
+To read from the Slice of the store, we use selector.
+if you what to read Slice of the store you have to call selector which gives you data of Slice.
+When we use selector it is known as subscribing the store.
+Which means whenever our store modify our component which is subscribed to that Slice will also modify.
+
+Now we are going to build a cart.
+
+1. Install redux toolkit : npm i @reduxjs/toolkit
+                           npm i react-redux
+
+2. redux toolkit main job is to maintain the store. This is the core of redux.
+   And react-redux is the brige between react and redux.
+
+3. Create a file store.js.
+   Import configureStore from redux toolkit.
+   Now we create a store variable.
+   This store takes an object which contains Slices.
+
+4. This store is different and our app is different, To connect our store and app we need a provider.
+   Import provider from react-redux and wrap our AppLayout with it. (In app.js).
+   This provider is component and we pass store prop in it.
+
+5. Now we are creating Slices.
+   To create a Slice we have a function createSlice which we can Import from redux-toolkit.
+   This createSlice function takes an object, which has 3 keys.
+   first is name -> in which we give name of our Slice.
+   second is initialState -> in which we give initialState value of our Slice.
+                             It takes an object.
+   third is reducers -> in which we have reducer function to modify our Slice.
+                        This reducer function takes two thing state and action.
+                        (this state is the initialState, action is data which is coming in)
+                        (action.payload contains data which we pass while calling this function.)
+                        This reducer function does not return anything, it takes a state and directly modify it.
+
+6. Now we have to export this Slice.
+
+7. Now our store does not  known about this Slice,
+   so Import Slice in store.
+   Now we will create a keys in our store called reducer, and pass name of the Slice and Slice.
+
+8. Now to subscribe to the store we need a hook called useSelector which comes from react-redux.
+   It take a callback function like this
+   const cartItems = useSelector(store => store.cart.items)
+ 
+9. To dispatch an action we have a hook, useDispatch.
+   This useDispatch takes an action and pass payload to our reducer function.(MealDetails.js)
+
+note -> const cartItems = useSelector(store => store)
+        If you subscribe to your store like this, this is a bad practice,
+        because every time your store changes the subscribed component will re-render.
+        so we should always use specific part of store which we want to subscribe.
+        like this : const cartItems = useSelector(store => store.cart.items)
