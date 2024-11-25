@@ -1,0 +1,51 @@
+In Form.jsx we have created a form without using any library.
+
+Now we will use a external library called react hook form to manage our form in react.(ReactHookForm.jsx)
+
+ReactHookForm -> ReactHookForm is small library that helps deal with forms in react.
+                 why : To manage form data.
+                       Submit form data.
+                       Enforce validation.
+                       Provides visual feedback.
+                 Although we can achieve all this using plane react(As we see in Form.jsx),
+                 ReactHookForm provides a simple, scalable and performant way to manage even the most complex forms.
+
+1. Install react hook form : npm i react-hook-form.
+2. import useForm hook from react-hook-form : import { useForm } from "react-hook-form"
+
+3. Now we will extract const register, handleSubmit, watch, formState : {errors} from useForm hook : 
+   const { register, handleSubmit, watch, formState : {errors} } = useForm()
+
+register : register your input into the hook by invoking the "register" function.
+           register function links the input field will the state of form.
+           <input {...register("firstName")}></input>
+           register function will take one argument which is name of input.
+           After register form will track this input and now we can do validate or submision of form.
+
+handleSubmit : "handleSubmit" will validate your inputs before invoking "onSubmit".
+                This function will receive the form data if form validation is successful.
+
+validation : React Hook Form makes form validation easy by aligning with the existing HTML standard for form validation.
+              List of validation rules supported:
+              * required
+              * min
+              * max
+              * minLength
+              * maxLength
+              * pattern
+              * validate
+
+              <input {...register("firstName", {required : true})}></input>
+
+Error-handling -> If error occures than we can handle this in the following way.
+                    <input
+                    className={errors.firstName && "Input-err"}
+                        {...register("firstName", {
+                        required: { value: true, message: "first name is required" },
+                        minLength: { value: 3, message: "Min length atleast 3" },
+                        })}
+                    ></input>
+                    {errors.firstName && <p className="err-msg">{errors.firstName.message}</p>}
+
+Here we want to add a feature in which we want to disable our submit button while our for is submitting.
+To do so our useForm hook provides isSubmitting value, which is true which submit form handler is running.
