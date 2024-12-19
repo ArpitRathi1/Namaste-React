@@ -28,9 +28,9 @@ React.createElement -> React.createElement functional will give us an object.
 Suppose we have to create a big HTML structure. It will be very complex to create this using React.createElement.
 To get rid of this we use jsx.
 
-JSX -> React comes with the concert of writting HTML with JS.
+JSX -> React comes with the concept of writting HTML with JS.
        But React.createElement is very complex.
-       To get rid of this facebook comes with the concert of jsx.
+       To get rid of this facebook comes with the concept of jsx.
        JSX is not HTML inside JavaScript, It is just HTML like syntax.
        JSX => React.createElement => object => HTML(DOM).
        Babel convertes your JSX code into createElement
